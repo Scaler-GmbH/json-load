@@ -90,8 +90,9 @@ export async function emit(dataset, data) {
 Clone the repository and modify the config.js file to your desired setup. 
 
 The following high level config options are available:
+
 |key| Description | Required | Default | Options |
---------------------------------------------------
+|------------------------------------------------|
 |flushIntervalMS | The minimum amount of time, in Miliseconds, to wait between sending chunks of data to the output modules | False | 10 | Any integer value |
 |logging.file.level | The minimum logging level to log to file | false | INFO | DEBUG INFO WARNING ERROR |
 |logging.file.path | The file system path of the log files | true | None | Any valid file system path |
