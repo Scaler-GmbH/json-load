@@ -100,7 +100,7 @@ async function loadGzippedJSONFile(file) {
                 }
             }
             catch (e) {
-                console.debug(`Skipped line ${linecount} of file ${file} with value: ${line.value}`)
+                console.debug(`Skipped line ${linecount} of file ${file} becasue ${e}}`)
                 // @todo: We need to emit the skipped record count as a metric
             }
             linecount++;
