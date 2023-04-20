@@ -90,7 +90,13 @@ async function loadGzippedJSONFile(file) {
             if (line.done) { done = 1 }
             try {
                 if (line.value) {
-                    arrOfJSON.push(JSON.parse(line.value));
+                    const lineValue = JSON.parse(line.value)
+                    // if linevalue is an array, we need to push each item in the array
+                    if (Array.isArray(lineValue)) {
+                        arrOfJSON.push(...lineValue);
+                    } else {
+                        arrOfJSON.push(lineValue);
+                    }
                 }
             }
             catch (e) {
